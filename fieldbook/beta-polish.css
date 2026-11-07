@@ -16,10 +16,10 @@ html body[data-book="6"] .sportTrack button>span{white-space:nowrap}
 html body[data-book="6"] .railDirectory button .sportIcon{width:44px;height:33px;flex:none}
 html body[data-book="6"] .sportTrack button .sportIcon{width:40px!important;height:30px!important;flex:none}
 /* ===== Banner pan ===== */
-.promoArt.promoEnter>.promoLink{animation:promoPan .75s cubic-bezier(.2,.8,.2,1)}
+.promoArt.promoEnter>.promoLink{animation:promoPan .48s cubic-bezier(.2,.75,.25,1)}
 .promoArt.promoEnter.promoBack>.promoLink{animation-name:promoPanBack}
-@keyframes promoPan{from{transform:translateX(9%);opacity:0}to{transform:none;opacity:1}}
-@keyframes promoPanBack{from{transform:translateX(-9%);opacity:0}to{transform:none;opacity:1}}
+@keyframes promoPan{from{transform:translateX(3%);opacity:.72}to{transform:none;opacity:1}}
+@keyframes promoPanBack{from{transform:translateX(-3%);opacity:.72}to{transform:none;opacity:1}}
 html.still .promoArt.promoEnter>.promoLink{animation:none}
 /* ===== Bet slip ===== */
 html body[data-book="6"] .deskTicket{position:fixed;right:22px;bottom:0;z-index:40;width:min(380px,calc(100vw - 32px));display:flex;flex-direction:column;align-items:stretch}

@@ -46,7 +46,7 @@ html.iconMotionEnabled .portraitLayer:not(.shown) svg.hubieKit *{animation:none!
   74%,100%{transform:translateY(6px) rotate(-240deg) scale(.9);opacity:0}}
 
 /* Fixture duel (hubie-kits.js duelSide/place). Plays only with .hkPlay: always on the match page header, and on fixture
-   cards only while hovered, starting from the kick (--hk0); otherwise both stand ready with the ball at the home feet. One 5.4 s loop per card, home half first:
+   cards only while hovered, starting from the kick (--hk0); otherwise both stand ready with the ball at the home feet. One 6.4 s loop per card, home half first:
    0%    ball arrives, home takes it on the chest (trap pose, leaning back)
    6-22% three touches on the knee (juggle pose on each touch, ready pose at the top of each bounce)
    24-29% plants (trap) and strikes it (strike pose) at 29%, then the follow-through
@@ -61,16 +61,16 @@ svg.hkDuel .hkPose-ready{opacity:1}
 .hkDuelBall .hkdX{position:absolute;left:0;top:0;transform:translateX(var(--hsx,-999px))}
 .hkDuelBall .hkdY{position:absolute;left:0;top:0;transform:translateY(var(--hsy,0))}
 .hkDuelBall .hkdSpin{position:absolute;display:block;width:var(--bs,24px);height:var(--bs,24px);left:calc(var(--bs,24px) / -2);top:calc(var(--bs,24px) / -2);filter:drop-shadow(0 3px 3px #0008);max-width:none}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkBody{animation:hkd-body 5.4s var(--hk0,0s) infinite ease-in-out}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-trap{animation:hkd-trap 5.4s var(--hk0,0s) infinite step-end}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-juggle{animation:hkd-juggle 5.4s var(--hk0,0s) infinite step-end}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-ready{animation:hkd-ready 5.4s var(--hk0,0s) infinite step-end}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-strike{animation:hkd-strike 5.4s var(--hk0,0s) infinite step-end}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-follow{animation:hkd-follow 5.4s var(--hk0,0s) infinite step-end}
-html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel.hkSide1 :is(.hkBody,.hkPose){animation-delay:calc(var(--hk0,0s) - 2.7s)}
-html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdX{animation:hkd-x 5.4s var(--hk0,0s) infinite linear}
-html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdY{animation:hkd-y 5.4s var(--hk0,0s) infinite}
-html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdSpin{animation:hkd-r 5.4s var(--hk0,0s) infinite linear}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkBody{animation:hkd-body 6.4s var(--hk0,0s) infinite ease-in-out}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-trap{animation:hkd-trap 6.4s var(--hk0,0s) infinite step-end}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-juggle{animation:hkd-juggle 6.4s var(--hk0,0s) infinite step-end}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-ready{animation:hkd-ready 6.4s var(--hk0,0s) infinite step-end}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-strike{animation:hkd-strike 6.4s var(--hk0,0s) infinite step-end}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel .hkPose-follow{animation:hkd-follow 6.4s var(--hk0,0s) infinite step-end}
+html.iconMotionEnabled .hkDuelLive.hkPlay svg.hkDuel.hkSide1 :is(.hkBody,.hkPose){animation-delay:calc(var(--hk0,0s) - 3.2s)}
+html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdX{animation:hkd-x 6.4s var(--hk0,0s) infinite linear}
+html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdY{animation:hkd-y 6.4s var(--hk0,0s) infinite}
+html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdSpin{animation:hkd-r 6.4s var(--hk0,0s) infinite linear}
 @keyframes hkd-trap{0%{opacity:1}4%{opacity:0}24%{opacity:1}27%{opacity:0}96%{opacity:1}100%{opacity:1}}
 @keyframes hkd-juggle{0%{opacity:0}4%{opacity:1}8%{opacity:0}12%{opacity:1}16%{opacity:0}20%{opacity:1}24%{opacity:0}100%{opacity:0}}
 @keyframes hkd-ready{0%{opacity:0}8%{opacity:1}12%{opacity:0}16%{opacity:1}20%{opacity:0}40%{opacity:1}96%{opacity:0}100%{opacity:0}}
@@ -79,14 +79,14 @@ html.iconMotionEnabled .hkDuelLive.hkPlay .hkDuelBall .hkdSpin{animation:hkd-r 5
 /* Body, in drawing units: lean back on the chest trap, a hop on each knee touch, step into the kick, lean back on
    the follow-through, a small bounce while the other side plays, brace as the ball comes back. */
 @keyframes hkd-body{
-  0%,100%{transform:translateX(-8px) rotate(-7deg)}
+  0%,100%{transform:translateX(-5px) rotate(-4deg)}
   4%,8%,16%,24%,42%,66%,84%{transform:none}
-  6%,14%,22%{transform:translateY(-9px)}
-  27%{transform:translateX(6px) rotate(3deg)}
-  29%{transform:translateX(12px) rotate(4deg)}
-  34%{transform:translateX(10px) rotate(-5deg)}
-  60%,78%{transform:translateY(-4px)}
-  96%{transform:translateX(-3px) rotate(-2deg)}}
+  6%,14%,22%{transform:translateY(-6px)}
+  27%{transform:translateX(4px) rotate(2deg)}
+  29%{transform:translateX(8px) rotate(3deg)}
+  34%{transform:translateX(7px) rotate(-3deg)}
+  60%,78%{transform:translateY(-3px)}
+  96%{transform:translateX(-2px) rotate(-2deg)}}
 @keyframes hkd-x{
   0%{transform:translateX(var(--hcx))}
   6%,22%{transform:translateX(var(--hkx))}

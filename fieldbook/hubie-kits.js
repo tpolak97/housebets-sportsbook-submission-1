@@ -241,7 +241,7 @@ const watch = () => {
     sizer?.observe(box);
     const card = box.closest('.snapCard, .footballMatchCard');
     if (card) {
-      box.style.setProperty('--hk0', '-1.57s');  // start at the kick (29% of the 5.4 s loop)
+      box.style.setProperty('--hk0', '-1.86s');  // start at the kick (29% of the 6.4 s loop)
       const on = () => box.classList.add('hkPlay'), off = () => box.classList.remove('hkPlay');
       card.addEventListener('mouseenter', on); card.addEventListener('mouseleave', off);
       if (card.matches(':hover') && !matchMedia('(hover: none), (pointer: coarse)').matches) on();  // phones keep a sticky :hover after a tap; phone-play.js decides there
